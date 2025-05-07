@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/siteparser
+    username: postgres
+    password: password
+  flyway:
+    url: jdbc:postgresql://postgres:5432/siteparser
+    username: postgres
+    password: password
+  data:
+    mongodb:
+      uri: mongodb://mongo:27017/contentDB
+
+baseUrl: https://spring.io

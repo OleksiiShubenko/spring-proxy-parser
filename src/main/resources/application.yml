@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/siteparser
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+  jpa:
+    cache:
+      user_second_level_cache: true
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    properties.hibernate.temp.use_jdbc_metadata_defaults: false
+    properties.hibernate.connection.CharSet: utf8
+    properties.hibernate.connection.characterEncoding: utf8
+    properties.hibernate.connection.useUnicode: true
+    properties.hibernate.connection.releaseMode: after_transaction
+    open-in-view: false
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/contentDB
+      expirySeconds: 600
+
+baseUrl: https://spring.io
